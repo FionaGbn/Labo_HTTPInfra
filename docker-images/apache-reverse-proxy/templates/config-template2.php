@@ -1,4 +1,5 @@
 <?php
+    # récupère les variables d'environnement
     $static_app1 = getenv('STATIC_APP1');
     $static_app2 = getenv('STATIC_APP2');
 

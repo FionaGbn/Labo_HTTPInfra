@@ -1,10 +1,11 @@
 <?php
+    # récupère les variables d'environnement
     $static_app = getenv('STATIC_APP');
     $dynamic_app = getenv('DYNAMIC_APP');
 ?>
 <VirtualHost *:80>
     ServerName demo.res.ch
-
+    
     ProxyPass '/api/animals/' 'http://<?php print "$dynamic_app"?>/'
     ProxyPassReverse '/api/animals/' 'http://<?php print "$dynamic_app"?>/'
 

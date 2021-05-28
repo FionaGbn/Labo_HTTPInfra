@@ -4,15 +4,17 @@ var chance = new Chance();
 const express = require('express')
 const app = express()
 
-//quand app reçoit get requête et ressource visée est / alors on exécute fonction de callback
+//quand app reçoit une requête get et que la ressource visée est / -> exécution de la fonction de callback
 app.get('/', function(req, res) {
     res.send(generateAnimals());
 });
 
+// app écoute sur le port 3000
 app.listen(3000, function() {
     console.log('Acception HTTP requests on port 3000');
 });
 
+// génère une liste d'animaux
 function generateAnimals() {
     var nAnimals = chance.integer({
         min: 1,
