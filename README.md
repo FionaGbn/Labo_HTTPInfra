@@ -214,7 +214,7 @@ Lancer en background 5 containers (en partant du principe que **les images du se
 - lancer le 2ème container du serveur statique: `sudo docker run -d --name apache_static2 res/apache_php`
 - lancer le 1r container du serveur dynamique: `sudo docker run -d --name express_dynamic1 res/express_animals`
 - lancer le 2ème container du serveur dynamique: `sudo docker run -d --name express_dynamic2 res/express_animals`
-- lancer le container du reverse proxy: `sudo docker run -d -e STATIC_APP1=172.17.0.x:80 -e STATIC_APP2=172.12.0.y:80 -e DYNAMIC_APP1=172.17.0.z:3000 -e DYNAMIC_APP2=172.17.0.w:3000 --name apache_rp -p 8080:80 res/apache_rp`
+- lancer le container du reverse proxy: `sudo docker run -d -e STATIC_APP1=172.17.0.x:80 -e STATIC_APP2=172.17.0.y:80 -e DYNAMIC_APP1=172.17.0.z:3000 -e DYNAMIC_APP2=172.17.0.w:3000 --name apache_rp -p 8080:80 res/apache_rp`
 
 **ATTENTION** à spécifier correctement les variables d'environnement:
 
